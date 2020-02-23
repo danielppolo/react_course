@@ -1,0 +1,78 @@
+# Project brief 
+
+-----
+
+
+
+###### We gonna build a To-do web app. Like this one 👇
+
+
+
+![ref2](D:\Documentos\code\react_course\_project\ref2.png)
+
+[Project mockup](https://cdn.dribbble.com/users/509287/screenshots/6581661/3x.png)
+
+### Requirements
+
+* SPA
+* Routes
+* Custom color
+* Custom font
+* Show Lists
+* Show to-do's
+* Mobile first
+* Each List has a color and icon (random).
+
+
+
+###### Nice to have
+
+* Animations
+* Filter To-do's
+* Use of Moment.js for dates
+* 
+
+
+
+### User stories
+
+* can **view** his Lists.
+* can **view** the To-do's of a List.
+
+* can **create** a List.
+* can **create** a Todo
+
+
+
+### Component break up
+
+
+
+###### Dump components
+
+* Button
+* CircleButton
+* Card
+* Title
+* Checkbox
+* Todo
+* ListCard
+* Input
+* Navbar
+
+
+
+###### Stateful components
+
+* App
+* TodoInput
+* List
+* ListContainer
+
+
+
+###### Views
+
+* ListsView
+* ListView
+* TodoView
