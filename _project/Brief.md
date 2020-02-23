@@ -12,6 +12,8 @@
 
 [Project mockup](https://cdn.dribbble.com/users/509287/screenshots/6581661/3x.png)
 
+
+
 ### Requirements
 
 * SPA
@@ -76,3 +78,48 @@
 * ListsView
 * ListView
 * TodoView
+
+
+
+
+
+
+
+### Phases
+
+###### Day 1
+
+* Create React App
+* Build all dump components  (All functional)
+* Compose the View 1. Static. Only props.
+* PropTypes
+
+
+
+###### Day 2
+
+* Build container/stateful components. (Class-based components)
+* Refactor app to handle a local state.
+
+* Compose View 2
+* Deploy to  Netlify
+
+
+
+###### Day 3
+
+* Setup store
+
+* Create actions / action-creators / reducer / services
+
+* Compose View 3
+
+* Connect to the API
+
+  
+
+###### Day 4
+
+* Setup router (2)
+* CSS-in-JS refactor.
+
