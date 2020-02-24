@@ -1,0 +1,6 @@
+# Setup
+
+Before starting the project download [Visual Studio Code](https://code.visualstudio.com/download).
+
+Then go to the Extensions (`Cmd + Shift + X`) and install **ESLint**.
+
