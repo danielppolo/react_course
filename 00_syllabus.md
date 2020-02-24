@@ -82,7 +82,7 @@
 ###### Lecture
 
 * React router
-* * CSS in JS (Styled Components/Emotion)
+* CSS in JS (Styled Components/Emotion)
 * Deploy
 
 

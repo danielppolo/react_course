@@ -40,4 +40,4 @@
 
 
 
-### Making components dynamic: props.
+### Making components dynamic: props
