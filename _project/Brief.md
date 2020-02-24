@@ -8,7 +8,7 @@
 
 
 
-![ref2](D:\Documentos\code\react_course\_project\ref2.png)
+![mockup](D:\Documentos\code\react_course\_project\mockup.png)
 
 [Project mockup](https://cdn.dribbble.com/users/509287/screenshots/6581661/3x.png)
 
