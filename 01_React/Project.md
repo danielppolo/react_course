@@ -176,7 +176,7 @@ npx create-react-app your-project-name
    
    
    
-   * ListCard
+   * List
    
    ![Card](D:\Documentos\code\react_course\_project\Card.png)
    

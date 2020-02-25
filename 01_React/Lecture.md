@@ -30,9 +30,19 @@
 
 ### Creating a component
 
+###### Functional components
+
 
 
 ### Conventions
+
+
+
+### HTML attrs
+
+
+
+
 
 
 
@@ -41,3 +51,13 @@
 
 
 ### Making components dynamic: props
+
+
+
+#### Styling
+
+###### Inline style
+
+
+
+###### Independent file
