@@ -6,7 +6,7 @@ function Card(props) {
     radius,
     depth,
     color,
-    children
+    children,
   } = props
 
   return (
