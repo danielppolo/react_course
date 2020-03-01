@@ -1,3 +1,3 @@
 json.array! @lists do |list|
-  json.extract! list, :id, :title, :color
+  json.extract! list, :id, :title, :color, :icon
 end

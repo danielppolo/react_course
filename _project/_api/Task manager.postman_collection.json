@@ -39,7 +39,10 @@
 									"value": "#FF00FF",
 									"type": "text"
 								}
-							]
+							],
+							"options": {
+								"formdata": {}
+							}
 						},
 						"url": {
 							"raw": "{{base_url}}/api/lists",
@@ -92,7 +95,10 @@
 									"type": "text",
 									"disabled": true
 								}
-							]
+							],
+							"options": {
+								"formdata": {}
+							}
 						},
 						"url": {
 							"raw": "{{base_url}}/api/lists/{{list_id}}",
@@ -204,7 +210,10 @@
 									"value": "This is a note test",
 									"type": "text"
 								}
-							]
+							],
+							"options": {
+								"formdata": {}
+							}
 						},
 						"url": {
 							"raw": "{{base_url}}/api/lists/{{list_id}}/tasks",
