@@ -64,10 +64,29 @@ class App extends Component {
     this.handleModalShow(false)
   }
 
+  handleBack = () => {
+    this.setState({
+      ...this.state,
+      selectedList: null,
+    })
+  }
+
+  handleCancel = () => {
+    this.handleModalShow(false)
+  }
+
   render() {
     const { lists, selectedList, modal } = this.state
     const list = selectedList && lists.find((lst) => lst.id === selectedList)
-    if (modal) return <NewTaskView list={list} handleSubmitTask={this.handleSubmitTask} />
+    if (modal) {
+      return (
+        <NewTaskView
+          list={list}
+          handleSubmitTask={this.handleSubmitTask}
+          handleCancel={this.handleCancel}
+        />
+      )
+    }
     return (
       <div className="App">
         {
@@ -76,6 +95,7 @@ class App extends Component {
               list={list}
               handleTaskChange={this.handleTaskChange}
               handleModalShow={this.handleModalShow}
+              handleBack={this.handleBack}
             />
           ) : (
             <ListsView lists={lists} handleListClick={this.handleListClick} />

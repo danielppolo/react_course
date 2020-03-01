@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Title from '../ui/Title'
 import Input from '../ui/Input'
 import Divider from '../ui/Divider'
 import '../../style/NewTaskForm.scss'
@@ -69,7 +68,6 @@ class NewTaskForm extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="NewTaskForm">
         <div className="NewTaskForm-fields">
-          <Title>New task</Title>
           <Divider verticalMargin={30} stroke={0} />
           <Input
             label="What are you planning?"

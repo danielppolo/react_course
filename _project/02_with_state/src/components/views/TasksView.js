@@ -6,15 +6,27 @@ import Card from '../ui/Card'
 import Icon from '../ui/Icon'
 import CircleButton from '../ui/CircleButton'
 import TaskContainer from '../containers/TaskContainer'
+import Header from '../ui/Header'
 import '../../style/TasksView.scss'
 
 function TasksView(props) {
-  const { list, handleTaskChange, handleModalShow } = props
+  const {
+    list, handleTaskChange, handleModalShow, handleBack,
+  } = props
 
   return (
     <View margin={0} background={list.color}>
       <div className="TasksView">
         <div className="TasksView-header">
+          <Header
+            left={
+              <Icon name="arrow_back" style={{ color: colors.white }} />
+            }
+            right={
+              <Icon name="more_vert" style={{ color: colors.white }} />
+            }
+            onLeft={handleBack}
+          />
           <CircleButton color={colors.white} flat size={40}>
             <Icon name={list.icon} style={{ color: list.color }} />
           </CircleButton>
