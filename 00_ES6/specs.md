@@ -2,5 +2,10 @@
 
 Before starting the project download [Visual Studio Code](https://code.visualstudio.com/download).
 
-Then go to the Extensions (`Cmd + Shift + X`) and install **ESLint**.
+Then go to the Extensions (`Cmd + Shift + X`) and install the following:
+
+* ESLint
+* Styled-components
+* Snippets
+* TODO:
 

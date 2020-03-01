@@ -122,55 +122,56 @@ npx create-react-app your-project-name
 
    * Button
 
-     ![Button](D:\Documentos\code\react_course\_project\Button.png)
+     ![Button](..\_project\assets\Button.png)
 
      
 
    * CircleButton
 
-     ![CircleButton](D:\Documentos\code\react_course\_project\CircleButton.png)
+     ![CircleButton](..\_project\assets\CircleButton.png)
 
      
 
    * Card
 
-     ![Card](D:\Documentos\code\react_course\_project\Card.png)
+     ![Card](..\_project\assets\Card.png)
 
      
 
-     ![Card2](D:\Documentos\code\react_course\_project\Card2.png)
+     ![Card2](..\_project\assets\Card2.png)
 
      
 
    * Title
 
    
-![Title](D:\Documentos\code\react_course\_project\Title.png)
-   
 
-   
-![Title_2](D:\Documentos\code\react_course\_project\Title_2.png)
-   
+![Title](..\_project\assets\Title.png)
 
-   
+
+
+![Title_2](..\_project\assets\Title_2.png)
+
+
+
 * Checkbox
-   
+  
 
-   ![Checkbox](D:\Documentos\code\react_course\_project\Checkbox.png)
+   ![Checkbox](..\_project\assets\Checkbox.png)
 
    
    
    * Todo
    
-     ![Todo](D:\Documentos\code\react_course\_project\Todo.png)
+     ![Todo](..\_project\assets\Todo.png)
    
    
    
-   ![Todo2](D:\Documentos\code\react_course\_project\Todo2.png)
+   ![Todo2](..\_project\assets\Todo2.png)
    
    
    
-   ![Todo3](D:\Documentos\code\react_course\_project\Todo3.png)
+   ![Todo3](..\_project\assets\Todo3.png)
    
    
    
@@ -178,7 +179,7 @@ npx create-react-app your-project-name
    
    * List
    
-   ![Card](D:\Documentos\code\react_course\_project\Card.png)
+   ![Card](..\_project\assets\Card.png)
    
    
    
@@ -189,27 +190,32 @@ npx create-react-app your-project-name
    * Input
    
    
-   ![Input](D:\Documentos\code\react_course\_project\Input.png)
+   ![Input](..\_project\assets\Input.png)
    
-   ![Input2](D:\Documentos\code\react_course\_project\Input2.png)
+   ![Input2](..\_project\assets\Input2.png)
    
    
    
    * Divider
    
-     ![Divider](D:\Documentos\code\react_course\_project\Divider.png)
+     ![Divider](..\_project\assets\Divider.png)
      
      
      
      * DateInput
      
-     ![DateInput](D:\Documentos\code\react_course\_project\DateInput.png)
+     ![DateInput](..\_project\assets\DateInput.png)
      
-     
+   
+   
+   
+   > If you wanna work with SASS rather than plain CSS, just install the `node-sass` package.
+   
+   
 
 6. Once you are done with the components, try to compose the View #1. 
 
-   ![View1](D:\Documentos\code\react_course\_project\View1.PNG)
+   ![View1](..\_project\assets\View1.PNG)
 
 
 
@@ -221,3 +227,10 @@ npx create-react-app your-project-name
 
 - [ ] Usage of MaterialUI 
 
+
+
+
+
+
+
+[Material Icons Index](https://material.io/resources/icons/?style=baseline)
