@@ -21,9 +21,6 @@ module.exports = {
     quotes: [2, 'single'],
     'jsx-quotes': [2, 'prefer-double'],
     'no-restricted-imports': [0, { patterns: ['../*'] }],
-    'jsx-a11y/no-autofocus': [0, {
-      ignoreNonDOM: 1,
-    }],
     'no-underscore-dangle': ['error', {
       allow: ['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'],
     }],

@@ -1,21 +1,23 @@
 import React from 'react'
-import '../../style/Card.css'
+import '../../style/Card.scss'
 
 function Card(props) {
   const {
     radius,
-    depth,
     color,
     children,
+    padding,
+    style,
   } = props
 
   return (
     <div
       className="Card"
       style={{
+        padding: padding || 16,
         borderRadius: radius || 4,
         backgroundColor: color || 'white',
-        boxShadow: '0 5px 10px #333',
+        ...style,
       }}
     >
       {children}
