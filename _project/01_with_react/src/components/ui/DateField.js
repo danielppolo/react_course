@@ -7,6 +7,8 @@ import DateFnsUtils from '@date-io/moment'
 import '../../style/DateField.scss'
 import { createMuiTheme } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles'
+import PropTypes from 'prop-types'
+import moment from 'moment'
 import colors from '../../utils/colors'
 
 const defaultMaterialTheme = (props) => createMuiTheme({
@@ -47,6 +49,16 @@ function DateField(props) {
       </MuiPickersUtilsProvider>
     </ThemeProvider>
   )
+}
+
+DateField.propTypes = {
+  label: PropTypes.string,
+  value: PropTypes.instanceOf(moment),
+}
+
+DateField.defaultProps = {
+  label: '',
+  value: moment(),
 }
 
 export default DateField

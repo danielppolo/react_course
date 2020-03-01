@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../style/Task.scss'
 import moment from 'moment'
+import PropTypes from 'prop-types'
 import colors from '../../utils/colors'
 import Checkbox from './Checkbox'
 
@@ -44,6 +45,18 @@ function Task(props) {
       <Checkbox checked={done} color={color} />
     </div>
   )
+}
+
+
+Task.propTypes = {
+  color: PropTypes.string,
+  done: PropTypes.bool.isRequired,
+  label: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+}
+
+Task.defaultProps = {
+  color: colors.primary,
 }
 
 export default Task

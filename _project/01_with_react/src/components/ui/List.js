@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Card from './Card'
 import '../../style/List.scss'
 import Icon from './Icon'
@@ -31,5 +32,14 @@ function List(props) {
     </div>
   )
 }
+
+
+List.propTypes = {
+  title: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  tasks: PropTypes.array.isRequired,
+  icon: PropTypes.string.isRequired,
+}
+
 
 export default List

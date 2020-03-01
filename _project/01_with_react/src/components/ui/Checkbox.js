@@ -1,8 +1,8 @@
 import React from 'react'
-import Checkbox from '@material-ui/core/Checkbox'
+import MaterialCheckbox from '@material-ui/core/Checkbox'
 import { withStyles } from '@material-ui/core/styles'
+import PropTypes from 'prop-types'
 import colors from '../../utils/colors'
-
 
 const style = {
   root: {
@@ -16,8 +16,17 @@ const style = {
   },
 }
 
-function CustomCheckbox(props) {
+function Checkbox(props) {
   const { color, ...otherProps } = props
-  return <Checkbox color={color || colors.primary} {...otherProps} />
+  return <MaterialCheckbox color={color} {...otherProps} />
 }
-export default withStyles(style)(CustomCheckbox)
+
+Checkbox.propTypes = {
+  color: PropTypes.string,
+}
+
+Checkbox.defaultProps = {
+  color: colors.white,
+}
+
+export default withStyles(style)(Checkbox)
