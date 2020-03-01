@@ -9,21 +9,21 @@ import { createMuiTheme } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles'
 import colors from '../../utils/colors'
 
-const defaultMaterialTheme = createMuiTheme({
+const defaultMaterialTheme = (props) => createMuiTheme({
   palette: {
     primary: {
-      main: colors.primary,
+      main: props.color || colors.primary,
     },
   },
 })
 
 function DateField(props) {
   const { label, value } = props
-  const handleChange = (value) => {
-    console.log(value)
+  const handleChange = (date) => {
+    console.log(date)
   }
   return (
-    <ThemeProvider theme={defaultMaterialTheme}>
+    <ThemeProvider theme={defaultMaterialTheme(props)}>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <DateTimePicker
           margin="normal"

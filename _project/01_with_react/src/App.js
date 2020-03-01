@@ -7,7 +7,7 @@ import CircleButton from './components/ui/CircleButton'
 import Input from './components/ui/Input'
 import List from './components/ui/List'
 import Task from './components/ui/Task'
-// import Divider from './components/ui/Divider'
+import Divider from './components/ui/Divider'
 import Title from './components/ui/Title'
 import colors from './utils/colors'
 import Icon from './components/ui/Icon'
@@ -27,7 +27,8 @@ function App() {
           date="2019-03-01T17:00:00"
         />
         <Input type="text" label="What are you planning?" />
-        <Input type="date" />
+        <Divider />
+        <Input type="date" color="#FF0000" />
       </Card>
       <List
         title="All"
