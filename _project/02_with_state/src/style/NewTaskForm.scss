@@ -1,0 +1,11 @@
+.NewTaskForm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+  .NewTaskForm-fields {
+    flex: 1;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+}

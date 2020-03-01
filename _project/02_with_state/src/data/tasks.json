@@ -1,0 +1,110 @@
+[
+  {
+    "title": "All",
+    "id": 1,
+    "color": "#669AA5",
+    "icon": "eco",
+    "tasks": [
+      {
+        "title": "Clean",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-02-21T09:00:00"
+      },
+      {
+        "title": "Lego",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Sweep",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Shower",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Water plants",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Teach",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Prepare course",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Code",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Sleep",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Rake",
+        "note": "Here's the description",
+        "done": true,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Dry",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      },
+      {
+        "title": "Repeat",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      }
+    ]
+  },
+  {
+    "title": "Favorite",
+    "color": "#26454B",
+    "id": 2,
+    "icon": "favorite",
+    "tasks": [
+      {
+        "title": "Clean",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      }
+    ]
+  },
+  {
+    "title": "Course",
+    "color": "#94775C",
+    "id": 3,
+    "icon": "face",
+    "tasks": [
+      {
+        "title": "Clean",
+        "note": "Here's the description",
+        "done": false,
+        "due_date": "2020-03-21T09:00:00"
+      }
+    ]
+  }
+]
