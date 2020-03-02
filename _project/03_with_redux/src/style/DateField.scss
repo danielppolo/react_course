@@ -1,0 +1,28 @@
+.DateField {
+  p {
+    color: #888;
+    font-size: 0.8em;
+    margin: 0;
+  }
+  input {
+    border: none;
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.MuiInputBase-input, .MuiInputLabel-shrink {
+  font-family: 'Montserrat' !important;
+}
+
+.MuiInput-underline {
+  border: none !important;
+  &:before {
+    border: none !important;
+  }
+  &:after {
+    border: none !important;
+  }
+}
