@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import View from '../ui/View'
 import Title from '../ui/Title'
 import colors from '../../utils/colors'
@@ -57,5 +58,14 @@ function TasksView(props) {
     </View>
   )
 }
+
+
+TasksView.propTypes = {
+  list: PropTypes.object.isRequired,
+  handleTaskChange: PropTypes.func.isRequired,
+  handleModalShow: PropTypes.func.isRequired,
+  handleBack: PropTypes.func.isRequired,
+}
+
 
 export default TasksView

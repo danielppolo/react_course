@@ -54,6 +54,7 @@ Task.propTypes = {
   done: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 Task.defaultProps = {

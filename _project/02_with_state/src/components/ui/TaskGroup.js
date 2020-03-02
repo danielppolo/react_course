@@ -36,11 +36,14 @@ function TaskGroup(props) {
 TaskGroup.propTypes = {
   color: PropTypes.string,
   tasks: PropTypes.array,
+  label: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 }
 
 TaskGroup.defaultProps = {
   color: colors.white,
   tasks: [],
+  label: '',
 }
 
 export default TaskGroup

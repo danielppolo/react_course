@@ -40,6 +40,11 @@ List.propTypes = {
   color: PropTypes.string.isRequired,
   tasks: PropTypes.array.isRequired,
   icon: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+}
+
+List.defaultProps = {
+  onClick: null,
 }
 
 

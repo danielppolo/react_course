@@ -51,6 +51,7 @@ function DateField(props) {
 DateField.propTypes = {
   label: PropTypes.string,
   value: PropTypes.instanceOf(moment),
+  onChange: PropTypes.func.isRequired,
 }
 
 DateField.defaultProps = {

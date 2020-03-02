@@ -2,6 +2,7 @@ import React from 'react'
 import moment from 'moment'
 import '../../style/TaskContainer.scss'
 import TaskGroup from '../ui/TaskGroup'
+import PropTypes from 'prop-types'
 
 function TaskContainer(props) {
   const { tasks, color, handleTaskChange } = props
@@ -15,6 +16,12 @@ function TaskContainer(props) {
       <TaskGroup tasks={doneTasks} color={color} onChange={handleTaskChange} label="Done" />
     </div>
   )
+}
+
+TaskContainer.propTypes = {
+  tasks: PropTypes.array.isRequired,
+  color: PropTypes.string.isRequired,
+  handleTaskChange: PropTypes.func.isRequired,
 }
 
 export default TaskContainer

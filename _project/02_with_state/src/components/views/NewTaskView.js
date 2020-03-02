@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import View from '../ui/View'
 import Header from '../ui/Header'
 import Icon from '../ui/Icon'
@@ -12,7 +13,7 @@ function NewTaskView(props) {
         <Header
           right={
             <Icon name="close" />
-            }
+          }
 
           onRight={handleCancel}
         >
@@ -23,5 +24,13 @@ function NewTaskView(props) {
     </View>
   )
 }
+
+
+NewTaskView.propTypes = {
+  list: PropTypes.object.isRequired,
+  handleSubmitTask: PropTypes.func.isRequired,
+  handleCancel: PropTypes.func.isRequired,
+}
+
 
 export default NewTaskView

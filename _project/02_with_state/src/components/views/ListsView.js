@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ListContainer from '../containers/ListContainer'
 import View from '../ui/View'
 import Title from '../ui/Title'
@@ -22,6 +23,11 @@ function ListsView(props) {
       />
     </View>
   )
+}
+
+ListsView.propTypes = {
+  lists: PropTypes.array.isRequired,
+  handleListClick: PropTypes.func.isRequired,
 }
 
 export default ListsView

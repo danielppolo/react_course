@@ -36,6 +36,7 @@ CircleButton.propTypes = {
   size: PropTypes.number,
   flat: PropTypes.bool,
   style: PropTypes.object,
+  onClick: PropTypes.func,
 }
 
 CircleButton.defaultProps = {
@@ -43,6 +44,7 @@ CircleButton.defaultProps = {
   size: 60,
   flat: false,
   style: {},
+  onClick: null,
 }
 
 export default CircleButton
