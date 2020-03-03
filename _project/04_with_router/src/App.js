@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,33 +12,35 @@ import TasksView from './components/views/TasksView'
 import NewTaskView from './components/views/NewTaskView'
 
 
-function App(props) {
-  const { lists, selected } = props
-  const list = selected && lists.find((lst) => lst.id === selected)
-  return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <ListsView lists={lists} />
-          </Route>
-          {
-            list && (
-              <>
-                <Route path="/list">
-                  <TasksView list={list} />
-                </Route>
-                <Route path="/new">
-                  <NewTaskView list={list} />
-                </Route>
-              </>
-            )
-          }
-        </Switch>
-        <Redirect to="/" />
-      </Router>
-    </div>
-  )
+class App extends Component {
+  render() {
+    const { lists, selected } = this.props
+    const list = selected && lists.find((lst) => lst.id === selected)
+    return (
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <ListsView lists={lists} />
+            </Route>
+            {
+              list && (
+                <>
+                  <Route path="/list">
+                    <TasksView list={list} />
+                  </Route>
+                  <Route path="/new">
+                    <NewTaskView list={list} />
+                  </Route>
+                </>
+              )
+            }
+          </Switch>
+          <Redirect to="/" />
+        </Router>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = (state) => ({
