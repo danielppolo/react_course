@@ -4,47 +4,19 @@ import './style/App.scss'
 import ListsView from './components/views/ListsView'
 import TasksView from './components/views/TasksView'
 import NewTaskView from './components/views/NewTaskView'
+import { connect } from 'react-redux'
+import {
+  setListTask as setListTaskAction,
+} from './action-creators/app'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      lists: taskList,
-      selectedList: null,
       modal: false,
     }
   }
 
-  handleListClick = (list) => {
-    this.setState((state) => ({
-      ...state,
-      selectedList: list.id,
-    }))
-  }
-
-  handleTaskChange = (task) => {
-    const { selectedList, lists } = this.state
-    const list = lists.find((lst) => lst.id === selectedList)
-    list.tasks.forEach((tsk) => {
-      if (tsk.title === task.title) tsk.done = !tsk.done
-    })
-    this.setState((state) => ({
-      ...state,
-      lists,
-    }))
-  }
-
-  handleAddTask = (task) => {
-    const { selectedList, lists } = this.state
-    const list = lists.find((lst) => lst.id === selectedList)
-    list.tasks.forEach((tsk) => {
-      if (tsk.title === task.title) tsk.done = !tsk.done
-    })
-    this.setState((state) => ({
-      ...state,
-      lists,
-    }))
-  }
 
   handleModalShow = (show = false) => {
     this.setState((state) => ({
@@ -53,22 +25,10 @@ class App extends Component {
     }))
   }
 
-  handleSubmitTask = (data) => {
-    const { selectedList, lists } = this.state
-    const list = lists.find((lst) => lst.id === selectedList)
-    list.tasks.push({
-      ...data,
-      done: false,
-    })
-    this.setState(data)
+  handleSubmitTask = (taskData) => {
+    const { setListTask } = this.props
+    setListTask(taskData)
     this.handleModalShow(false)
-  }
-
-  handleBack = () => {
-    this.setState((state) => ({
-      ...state,
-      selectedList: null,
-    }))
   }
 
   handleCancel = () => {
@@ -76,8 +36,9 @@ class App extends Component {
   }
 
   render() {
-    const { lists, selectedList, modal } = this.state
-    const list = selectedList && lists.find((lst) => lst.id === selectedList)
+    const { modal } = this.state
+    const { lists, selected } = this.props
+    const list = selected && lists.find((lst) => lst.id === selected)
     if (modal) {
       return (
         <NewTaskView
@@ -93,15 +54,22 @@ class App extends Component {
           list ? (
             <TasksView
               list={list}
-              handleTaskChange={this.handleTaskChange}
               handleModalShow={this.handleModalShow}
-              handleBack={this.handleBack}
             />
-          ) : <ListsView lists={lists} handleListClick={this.handleListClick} />
+          ) : <ListsView lists={lists} />
         }
       </div>
     )
   }
 }
 
-export default App
+const mapStateToProps = (state) => ({
+  lists: state.app.lists,
+  selected: state.app.selected,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  setListTask: (payload) => dispatch(setListTaskAction(payload)),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
