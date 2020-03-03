@@ -1,7 +1,10 @@
 import React from 'react'
-import List from '../ui/List'
 import '../../style/ListContainer.scss'
 import PropTypes from 'prop-types'
+import {
+  Link,
+} from 'react-router-dom'
+import List from '../ui/List'
 
 function ListContainer(props) {
   const { lists, handleListClick } = props
@@ -9,14 +12,16 @@ function ListContainer(props) {
     <div className="ListContainer">
       {
         lists.map((list) => (
-          <List
-            key={list.title + list.icon}
-            title={list.title}
-            icon={list.icon}
-            tasks={list.tasks}
-            color={list.color}
-            onClick={() => handleListClick(list)}
-          />
+          <Link to="/list">
+            <List
+              key={list.title + list.icon}
+              title={list.title}
+              icon={list.icon}
+              tasks={list.tasks}
+              color={list.color}
+              onClick={() => handleListClick(list)}
+            />
+          </Link>
         ))
       }
     </div>

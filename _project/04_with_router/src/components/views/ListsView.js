@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import ListContainer from '../containers/ListContainer'
 import View from '../ui/View'
 import Title from '../ui/Title'
 import Divider from '../ui/Divider'
 import Header from '../ui/Header'
 import Icon from '../ui/Icon'
-import { connect } from 'react-redux'
 import {
   setSelectedList as setSelectedListAction,
 } from '../../action-creators/app'
+
 function ListsView(props) {
   const { lists, setSelectedList } = props
 
@@ -19,9 +20,9 @@ function ListsView(props) {
 
   return (
     <View>
-      <Header left={
+      <Header left={(
         <Icon name="format_align_left" />
-      }
+      )}
       />
       <Title>Lists</Title>
       <Divider verticalMargin={15} stroke={0} />
@@ -39,10 +40,8 @@ ListsView.propTypes = {
 }
 
 
-const mapDispatchToProps = dispatch => {
-  return {
-    setSelectedList: (payload) => dispatch(setSelectedListAction(payload)),
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  setSelectedList: (payload) => dispatch(setSelectedListAction(payload)),
+})
 
 export default connect(null, mapDispatchToProps)(ListsView)

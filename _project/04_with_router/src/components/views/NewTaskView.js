@@ -1,12 +1,21 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import { withRouter } from 'react-router-dom'
 import View from '../ui/View'
 import Header from '../ui/Header'
 import Icon from '../ui/Icon'
 import NewTaskForm from '../containers/NewTaskForm'
+import {
+  setListTask as setListTaskAction,
+} from '../../action-creators/app'
 
 function NewTaskView(props) {
-  const { list, handleSubmitTask, handleCancel } = props
+  const { list, history, setListTask } = props
+  const handleSubmitTask = (taskData) => {
+    setListTask(taskData)
+    history.push('/list')
+  }
   return (
     <View margin={0}>
       <div style={{ padding: 16 }}>
@@ -15,7 +24,7 @@ function NewTaskView(props) {
             <Icon name="close" />
           }
 
-          onRight={handleCancel}
+          onRight={() => { history.push('/list') }}
         >
           <span>New task</span>
         </Header>
@@ -28,9 +37,11 @@ function NewTaskView(props) {
 
 NewTaskView.propTypes = {
   list: PropTypes.object.isRequired,
-  handleSubmitTask: PropTypes.func.isRequired,
-  handleCancel: PropTypes.func.isRequired,
+  setListTask: PropTypes.func.isRequired,
 }
 
+const mapDispatchToProps = (dispatch) => ({
+  setListTask: (payload) => dispatch(setListTaskAction(payload)),
+})
 
-export default NewTaskView
+export default connect(null, mapDispatchToProps)(withRouter(NewTaskView))

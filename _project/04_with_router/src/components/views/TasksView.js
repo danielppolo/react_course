@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import {
+  withRouter,
+} from 'react-router-dom'
 import View from '../ui/View'
 import Title from '../ui/Title'
 import colors from '../../utils/colors'
@@ -17,11 +20,12 @@ import {
 
 function TasksView(props) {
   const {
-    list, toggleListTask, handleModalShow, setSelectedList,
+    list, toggleListTask, setSelectedList, history,
   } = props
 
   const goBack = () => {
     setSelectedList(null)
+    history.push('/')
   }
 
   return (
@@ -53,7 +57,7 @@ function TasksView(props) {
           <TaskContainer handleTaskChange={toggleListTask} color={list.color} tasks={list.tasks} />
         </Card>
         <CircleButton
-          onClick={() => handleModalShow(true)}
+          onClick={() => history.push('/new')}
           color={list.color}
           style={{
             position: 'absolute',
@@ -71,8 +75,7 @@ function TasksView(props) {
 
 TasksView.propTypes = {
   list: PropTypes.object.isRequired,
-  handleTaskChange: PropTypes.func.isRequired,
-  handleModalShow: PropTypes.func.isRequired,
+  toggleListTask: PropTypes.func.isRequired,
   setSelectedList: PropTypes.func.isRequired,
 }
 
@@ -82,4 +85,4 @@ const mapDispatchToProps = (dispatch) => ({
   toggleListTask: (payload) => dispatch(toggleListTaskAction(payload)),
 })
 
-export default connect(null, mapDispatchToProps)(TasksView)
+export default connect(null, mapDispatchToProps)(withRouter(TasksView))
