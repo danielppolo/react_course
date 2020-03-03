@@ -1,0 +1,7 @@
+.ListContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto; 
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
