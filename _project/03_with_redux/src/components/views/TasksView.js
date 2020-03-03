@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import View from '../ui/View'
 import Title from '../ui/Title'
 import colors from '../../utils/colors'
@@ -9,11 +10,19 @@ import CircleButton from '../ui/CircleButton'
 import TaskContainer from '../containers/TaskContainer'
 import Header from '../ui/Header'
 import '../../style/TasksView.scss'
+import {
+  setSelectedList as setSelectedListAction,
+  toggleListTask as toggleListTaskAction,
+} from '../../action-creators/app'
 
 function TasksView(props) {
   const {
-    list, handleTaskChange, handleModalShow, handleBack,
+    list, toggleListTask, handleModalShow, setSelectedList,
   } = props
+
+  const goBack = () => {
+    setSelectedList(null)
+  }
 
   return (
     <View margin={0} background={list.color}>
@@ -26,7 +35,7 @@ function TasksView(props) {
             right={
               <Icon name="more_vert" style={{ color: colors.white }} />
             }
-            onLeft={handleBack}
+            onLeft={goBack}
           />
           <CircleButton color={colors.white} flat size={40}>
             <Icon name={list.icon} style={{ color: list.color }} />
@@ -41,7 +50,7 @@ function TasksView(props) {
           </div>
         </div>
         <Card radius={20} padding={30} style={{ flexBasis: '75vh', overflow: 'hidden' }}>
-          <TaskContainer handleTaskChange={handleTaskChange} color={list.color} tasks={list.tasks} />
+          <TaskContainer handleTaskChange={toggleListTask} color={list.color} tasks={list.tasks} />
         </Card>
         <CircleButton
           onClick={() => handleModalShow(true)}
@@ -64,8 +73,13 @@ TasksView.propTypes = {
   list: PropTypes.object.isRequired,
   handleTaskChange: PropTypes.func.isRequired,
   handleModalShow: PropTypes.func.isRequired,
-  handleBack: PropTypes.func.isRequired,
+  setSelectedList: PropTypes.func.isRequired,
 }
 
 
-export default TasksView
+const mapDispatchToProps = (dispatch) => ({
+  setSelectedList: (payload) => dispatch(setSelectedListAction(payload)),
+  toggleListTask: (payload) => dispatch(toggleListTaskAction(payload)),
+})
+
+export default connect(null, mapDispatchToProps)(TasksView)

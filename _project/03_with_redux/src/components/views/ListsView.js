@@ -6,9 +6,17 @@ import Title from '../ui/Title'
 import Divider from '../ui/Divider'
 import Header from '../ui/Header'
 import Icon from '../ui/Icon'
-
+import { connect } from 'react-redux'
+import {
+  setSelectedList as setSelectedListAction,
+} from '../../action-creators/app'
 function ListsView(props) {
-  const { lists, handleListClick } = props
+  const { lists, setSelectedList } = props
+
+  const handleListClick = (list) => {
+    setSelectedList(list.id)
+  }
+
   return (
     <View>
       <Header left={
@@ -27,7 +35,14 @@ function ListsView(props) {
 
 ListsView.propTypes = {
   lists: PropTypes.array.isRequired,
-  handleListClick: PropTypes.func.isRequired,
+  setSelectedList: PropTypes.func.isRequired,
 }
 
-export default ListsView
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setSelectedList: (payload) => dispatch(setSelectedListAction(payload)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(ListsView)
