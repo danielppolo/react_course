@@ -16,10 +16,10 @@ class App extends Component {
   }
 
   handleListClick = (list) => {
-    this.setState({
-      ...this.state,
+    this.setState((state) => ({
+      ...state,
       selectedList: list.id,
-    })
+    }))
   }
 
   handleTaskChange = (task) => {
@@ -28,10 +28,10 @@ class App extends Component {
     list.tasks.forEach((tsk) => {
       if (tsk.title === task.title) tsk.done = !tsk.done
     })
-    this.setState({
-      ...this.state,
+    this.setState((state) => ({
+      ...state,
       lists,
-    })
+    }))
   }
 
   handleAddTask = (task) => {
@@ -40,17 +40,17 @@ class App extends Component {
     list.tasks.forEach((tsk) => {
       if (tsk.title === task.title) tsk.done = !tsk.done
     })
-    this.setState({
-      ...this.state,
+    this.setState((state) => ({
+      ...state,
       lists,
-    })
+    }))
   }
 
   handleModalShow = (show = false) => {
-    this.setState({
-      ...this.state,
+    this.setState((state) => ({
+      ...state,
       modal: show,
-    })
+    }))
   }
 
   handleSubmitTask = (data) => {
@@ -65,10 +65,10 @@ class App extends Component {
   }
 
   handleBack = () => {
-    this.setState({
-      ...this.state,
+    this.setState((state) => ({
+      ...state,
       selectedList: null,
-    })
+    }))
   }
 
   handleCancel = () => {
@@ -97,9 +97,7 @@ class App extends Component {
               handleModalShow={this.handleModalShow}
               handleBack={this.handleBack}
             />
-          ) : (
-            <ListsView lists={lists} handleListClick={this.handleListClick} />
-          )
+          ) : <ListsView lists={lists} handleListClick={this.handleListClick} />
         }
       </div>
     )
