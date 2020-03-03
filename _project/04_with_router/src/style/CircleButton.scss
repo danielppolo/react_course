@@ -1,0 +1,11 @@
+.CircleButton {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  z-index: 2;
+  transition: 300ms ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  &:active  {
+    box-shadow: 0 0 1px rgba(0,0,0,0);
+  }
+}

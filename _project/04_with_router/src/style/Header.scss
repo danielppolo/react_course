@@ -1,0 +1,11 @@
+.Header {
+  min-height: 40px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .Header-center {
+    flex: 1;
+    text-align: center;
+  }
+}
