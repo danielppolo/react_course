@@ -1,0 +1,15 @@
+.TextField {
+  p {
+    color: #888;
+    font-size: 0.8em;
+    margin: 0;
+  }
+  input {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
