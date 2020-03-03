@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import taskList from './data/tasks.json'
+import { connect } from 'react-redux'
 import './style/App.scss'
 import ListsView from './components/views/ListsView'
 import TasksView from './components/views/TasksView'
 import NewTaskView from './components/views/NewTaskView'
-import { connect } from 'react-redux'
 import {
   setListTask as setListTaskAction,
 } from './action-creators/app'
