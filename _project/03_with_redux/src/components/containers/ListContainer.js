@@ -2,9 +2,13 @@ import React from 'react'
 import List from '../ui/List'
 import '../../style/ListContainer.scss'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import {
+  setSelectedList as setSelectedListAction,
+} from '../../action-creators/app'
 
 function ListContainer(props) {
-  const { lists, handleListClick } = props
+  const { lists, setSelectedList } = props
   return (
     <div className="ListContainer">
       {
@@ -15,7 +19,7 @@ function ListContainer(props) {
             icon={list.icon}
             tasks={list.tasks}
             color={list.color}
-            onClick={() => handleListClick(list)}
+            onClick={() => setSelectedList(list.id)}
           />
         ))
       }
@@ -25,7 +29,13 @@ function ListContainer(props) {
 
 ListContainer.propTypes = {
   lists: PropTypes.array.isRequired,
-  handleListClick: PropTypes.func.isRequired,
+  setSelectedList: PropTypes.func.isRequired,
 }
 
-export default ListContainer
+const mapDispatchToProps = dispatch => {
+  return {
+    setSelectedList: (payload) => dispatch(setSelectedListAction(payload)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(ListContainer)

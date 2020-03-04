@@ -13,6 +13,7 @@ import axios from 'axios'
 
 function NewTaskView(props) {
   const { list, history, setListTask } = props
+
   const handleSubmitTask = (taskData) => {
     axios.post(`/lists/${list.id}/tasks`, taskData)
       .then((response) => {

@@ -6,16 +6,9 @@ import Title from '../ui/Title'
 import Divider from '../ui/Divider'
 import Header from '../ui/Header'
 import Icon from '../ui/Icon'
-import { connect } from 'react-redux'
-import {
-  setSelectedList as setSelectedListAction,
-} from '../../action-creators/app'
-function ListsView(props) {
-  const { lists, setSelectedList } = props
 
-  const handleListClick = (list) => {
-    setSelectedList(list.id)
-  }
+function ListsView(props) {
+  const { lists } = props
 
   return (
     <View>
@@ -27,7 +20,6 @@ function ListsView(props) {
       <Divider verticalMargin={15} stroke={0} />
       <ListContainer
         lists={lists}
-        handleListClick={handleListClick}
       />
     </View>
   )
@@ -35,14 +27,6 @@ function ListsView(props) {
 
 ListsView.propTypes = {
   lists: PropTypes.array.isRequired,
-  setSelectedList: PropTypes.func.isRequired,
 }
 
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setSelectedList: (payload) => dispatch(setSelectedListAction(payload)),
-  }
-}
-
-export default connect(null, mapDispatchToProps)(ListsView)
+export default ListsView

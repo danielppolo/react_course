@@ -40,7 +40,7 @@ function DateField(props) {
           }}
           disablePast
           disableToolbar
-          views={['date', 'month', 'hours', 'minutes']}
+          ampm={false}
           showTodayButton
           cancelLabel="Cancel"
           okLabel="Set time"
