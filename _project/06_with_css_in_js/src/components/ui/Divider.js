@@ -5,6 +5,8 @@ import colors from '../../utils/colors'
 
 const DividerStyled = styled.div`
   width: 100%;
+  border-bottom: ${(props) => props.stroke}px solid ${(props) => props.color};
+  margin: ${(props) => props.color}px 0;
 `
 function Divider(props) {
   const {
@@ -15,10 +17,8 @@ function Divider(props) {
 
   return (
     <DividerStyled
-      style={{
-        borderBottom: `${stroke}px solid ${color}`,
-        margin: `${verticalMargin}px 0`,
-      }}
+      stroke={stroke}
+      color={color}
     />
   )
 }

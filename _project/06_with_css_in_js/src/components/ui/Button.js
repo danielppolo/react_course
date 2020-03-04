@@ -14,6 +14,8 @@ const ButtonStyled = styled.button`
   justify-content: center;
   font-size: 16px;
   transition: 300ms ease;
+  background-color: ${(props) => props.background};
+  color: ${(props) => props.color};
   &:active span {
     transform: scale(0.9);
   }
@@ -31,10 +33,8 @@ function Button(props) {
   return (
     <ButtonStyled
       type={type}
-      style={{
-        backgroundColor: background,
-        color,
-      }}
+      background={background}
+      color={color}
       {...otherProps}
     >
       <span>{children}</span>

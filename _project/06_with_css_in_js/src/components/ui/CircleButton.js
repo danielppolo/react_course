@@ -9,7 +9,11 @@ const CircleButtonStyled = styled.div`
   justify-content: center;
   z-index: 2;
   transition: 300ms ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  box-shadow: ${(props) => (props.flat ? 'none' : '0 0 10px rgba(0,0,0,0.4)')};
+  border-radius: ${(props) => props.borderRadius}px;
+  height: ${(props) => props.height}px;
+  width: ${(props) => props.width}px;
+  background-color: ${(props) => props.backgroundColor}; 
   &:active  {
     box-shadow: 0 0 1px rgba(0,0,0,0);
   }
@@ -27,14 +31,11 @@ function CircleButton(props) {
   return (
     <CircleButtonStyled
       onClick={onClick}
-      style={{
-        backgroundColor: color,
-        height: size,
-        width: size,
-        borderRadius: size / 2,
-        boxShadow: flat && 'none',
-        ...style,
-      }}
+      backgroundColor={color}
+      height={size}
+      width={size}
+      borderRadius={size / 2}
+      flat={flat}
     >
       {children}
     </CircleButtonStyled>

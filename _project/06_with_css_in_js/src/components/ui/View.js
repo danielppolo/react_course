@@ -10,16 +10,16 @@ const ViewStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background-color: ${(props) => props.background};
+  padding: ${(props) => props.padding}px;
 `
 
 function View(props) {
   const { children, background, margin } = props
   return (
     <ViewStyled
-      style={{
-        backgroundColor: background,
-        padding: margin,
-      }}
+      background={background}
+      padding={margin}
     >
       {children}
     </ViewStyled>
