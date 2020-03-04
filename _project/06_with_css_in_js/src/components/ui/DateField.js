@@ -4,7 +4,6 @@ import {
 } from '@material-ui/pickers'
 import React from 'react'
 import DateFnsUtils from '@date-io/moment'
-import '../../style/DateField.scss'
 import { createMuiTheme } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles'
 import PropTypes from 'prop-types'

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,11 +7,9 @@ import {
   Redirect,
 } from 'react-router-dom'
 import { connect } from 'react-redux'
-import './style/App.scss'
 import ListsView from './components/views/ListsView'
 import TasksView from './components/views/TasksView'
 import NewTaskView from './components/views/NewTaskView'
-import axios from 'axios'
 import { setLists as setListsAction } from './action-creators/app'
 
 class App extends Component {
@@ -21,6 +20,7 @@ class App extends Component {
         setLists(response.data)
       })
   }
+
   render() {
     const { lists, selected } = this.props
     const list = selected && lists.find((lst) => lst.id === selected)
