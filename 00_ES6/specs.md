@@ -44,4 +44,4 @@ Install the following extensions for Chrome:
 ###### Optional: 
 
 * Install [FiraCode](https://github.com/tonsky/FiraCode) Font for VSCode. Instructions [here](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions).
-
+* Install Git-Flow plug-in for your zsh terminal.
