@@ -1,5 +1,11 @@
 # JavaScript ES6 🤟
 
+>  Everything in JS is an object. 😱
+
+> JavaScript is an asynchronous language 
+
+
+
 ### Variable
 
 A [variable](https://en.wikipedia.org/wiki/Variable_(computer_science)) is a “named storage” for data. We can use variables to store goodies, visitors, and other data.
@@ -101,6 +107,14 @@ alert(surname);  // Kantor
 
 
 
+The rest operator
+
+```javascript
+let [name1, name2, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+```
+
+
+
 ###### Objects destructuring
 
 ```javascript
@@ -115,6 +129,23 @@ let {title, width, height} = options;
 alert(title);  // Menu
 alert(width);  // 100
 alert(height); // 200
+```
+
+
+
+The rest operator
+
+```javascript
+let options = {
+  title: "Menu",
+  height: 200,
+  width: 100
+};
+
+// title = property named title
+// rest = object with the rest of properties
+let {title, ...rest} = options;
+// now title="Menu", rest={height: 200, width: 100}
 ```
 
 
@@ -310,4 +341,4 @@ npm init
 
 
 
-### Everything in JS is an object. 😱
+### 
